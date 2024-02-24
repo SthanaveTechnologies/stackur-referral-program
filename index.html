@@ -8,18 +8,27 @@
 </head>
 <style>
     body {
-        width: 500px;
-        height: 500px;
+        width: 100%;
+        height: 100%;
         background-size: contain;
         font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        padding: 20px;
+        background-color: white;
     }
 
     .image {
-        height: 400px;
+        min-height: 100px;
+        min-width: 100px;
+        max-width: 100%;
+        max-height: 100%;
     }
 
     .logo {
-        height: 50px;
+        min-height: 10px;
+        max-height: 100px;
+        min-width: 20px;
+        max-width: 200px;
     }
 
     .center {
@@ -31,34 +40,34 @@
 
 <body onclick="getReferral()">
     <div class="center">
-        <img src="https://i.vimeocdn.com/video/1753898361-f24bbbdc224d420cce288a8e47fbb01a68484a1480551ead266281bb1611503a-d"
-            alt="" class="image">
+        <img src="stackur.avif" alt="" class="image">
     </div>
 
-    <h4 class="center">Code for website</h4>
+    <h3 class="center">Get our app on</h3>
 
     <div class="center">
-        <img src="https://img1.wsimg.com/isteam/ip/c97cb104-d717-47d7-a339-f11321e72114/download-on-the-app-store-apple-logo-png-trans.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
+        <img src="ios.webp"
             alt="iOS" class="logo" style="padding-inline: 10px;">
 
-        <img src="https://img1.wsimg.com/isteam/ip/c97cb104-d717-47d7-a339-f11321e72114/google-play-badge-logo-png-transparent.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
+        <img src="android.webp"
             alt="Android" class="logo" style="padding-inline: 10px;">
     </div>
 </body>
 <script>
     var url = window.location.href;
-    var id = '';
+    var code = '';
 
-    var match = url.match(/[?&]id=([^&]+)/);
+    var match = url.match(/[?&]code=([^&]+)/);
     if (match !== null) {
-        id = match[1];
-        console.log(id);
+        code = match[1];
     } else {
         console.log('ID parameter not found');
     }
 
-    function getReferral(){
-        window.location.href = `https://stackur.app.link/hERM8gOumHb?code=${id}&source=${window.location.href}` ;
+    function getReferral() {
+        let url = `https://stackur.app.link/hERM8gOumHb?code=${code}&source=${window.location.href}`;
+        window.open(url, '_blank');
+
     }
 </script>
 
