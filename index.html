@@ -46,11 +46,9 @@
     <h3 class="center">Get our app on</h3>
 
     <div class="center">
-        <img src="ios.webp"
-            alt="iOS" class="logo" style="padding-inline: 10px;">
+        <img src="ios.webp" alt="iOS" class="logo" style="padding-inline: 10px;">
 
-        <img src="android.webp"
-            alt="Android" class="logo" style="padding-inline: 10px;">
+        <img src="android.webp" alt="Android" class="logo" style="padding-inline: 10px;">
     </div>
 </body>
 <script>
@@ -65,8 +63,10 @@
     }
 
     function getReferral() {
-        let url = `https://stackur.app.link/hERM8gOumHb?code=${code}&source=${window.location.href}`;
-        window.open(url, '_blank');
+        if (code) {
+            let url = `https://stackur.app.link/hERM8gOumHb?code=${code}&source=${window.location.href}`;
+            window.open(url, '_blank');
+        }
 
     }
 </script>
