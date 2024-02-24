@@ -64,7 +64,7 @@
 
     function getReferral() {
         if (code) {
-            let url = `https://stackur.app.link/hERM8gOumHb?code=${code}&source=${window.location.href}`;
+            let url = `https://stackur.app.link/hERM8gOumHb?code=${code}&source=${window.parent.location.href}`;
             window.open(url, '_blank');
         }
 
