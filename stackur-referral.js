@@ -1,3 +1,4 @@
+let baseurl = 'https://sthanavetechnologies.github.io/stackur-referral-program'
 let htmlToAppend = `<style>
 body {
     width: 100%;
@@ -32,29 +33,19 @@ body {
 
 <body onclick="getReferral()">
 <div class="center">
-    <img src="stackur.avif" alt="" class="image">
+    <img src="${baseurl}/stackur.avif" alt="" class="image">
 </div>
 
 <h3 class="center">Get our app on</h3>
 
 <div class="center">
-    <img src="ios.webp" alt="iOS" class="logo" style="padding-inline: 10px;">
+    <img src="${baseurl}/ios.webp" alt="iOS" class="logo" style="padding-inline: 10px;">
 
-    <img src="android.webp" alt="Android" class="logo" style="padding-inline: 10px;">
+    <img src="${baseurl}/android.webp" alt="Android" class="logo" style="padding-inline: 10px;">
 </div>
 </body>` ;
 
 function onClick(id, code) {
-    // var url = window.location.href;
-    // var code = '';
-
-    // var match = url.match(/[?&]code=([^&]+)/);
-    // if (match !== null) {
-    //     code = match[1];
-    // } else {
-    //     console.log('ID parameter not found');
-    // }
-
     var elementId = document.getElementById(id)
 
     if (elementId) {
